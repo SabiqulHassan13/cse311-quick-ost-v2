@@ -1,0 +1,58 @@
+
+
+
+create table Registered_User(
+user_id int(3) PRIMARY KEY,
+password varchar(10) not null,
+first_name varchar(15) not null,
+last_name varchar(15) not null,
+email_id varchar(30)not null,
+contact_no varchar(15),
+reg_date date not null);
+
+
+insert into Registered_User
+values(101, 'pass123', 'John', 'Smith', 'john.smith@gmail.com', '01515222333', '2019-07-27');
+
+
+
+// review table code
+create table Review(
+review_id int(3) PRIMARY KEY,
+user_id int(3) not null,
+product_id int(3) not null,
+review VARCHAR(255) not null,
+review_date date not null);
+
+
+// product table code
+create table product(
+product_id int(3) PRIMARY KEY,
+user_id int(3) not null,
+price DECIMAL(8,2) not null,
+quantity int(3) not null,
+order_date date not null);
+
+or alter code for without primary key
+create table product(
+product_id int(3),
+user_id int(3) not null,
+price DECIMAL(8,2) not null,
+quantity int(3) not null,
+order_date date not null);
+
+// contact-us table code
+create table contact_us(
+email_id varchar(30) PRIMARY KEY,
+subject varchar(30)not null,
+message VARCHAR(250) not null);
+
+
+
+
+
+
+
+
+
+
